@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+input {
+  max-width: 500px;
+}
+
+.gray {
+  color: #828282;
+}
+
+.orange {
+  background-color: #7188d4;
+}
+
+.background-gray {
+  background-color: rgb(246, 246, 239);
+}
+
+.options {
+  margin-left: 5px;
+  margin-right: 2px;
+  color: black;
+}
+
+.options:hover {
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.f11 {
+  font-size: 20px;
+}
+
+.f11:hover {
+  color: rgb(173, 233, 173);
+  cursor: pointer;
+}
+
+.w85 {
+  width: 85%;
+}
+
+.button {
+  font-family: monospace;
+  font-size: 10pt;
+  color: black;
+  background-color: buttonface;
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  cursor: pointer;
+  max-width: 250px;
+}
