@@ -12,6 +12,9 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { BrowserRouter } from "react-router-dom";
 import { setContext } from "apollo-link-context";
 import { AUTH_TOKEN } from "./constants";
+import { split } from "apollo-link";
+import { WebSocketLink } from "apollo-link-ws";
+import { getMainDefinition } from "apollo-utilities";
 
 // create http-link which will connect your Apollo Client instance to your GraphQL API (server)
 const httpLink = createHttpLink({
@@ -27,9 +30,28 @@ const authLink = setContext((_, { headers }) => {
     }
   };
 });
+
+const wsLink = new WebSocketLink({
+  uri: `ws://localhost:4000`,
+  options: {
+    reconnect: true,
+    connectionParams: {
+      authToken: localStorage.getItem(AUTH_TOKEN)
+    }
+  }
+});
+
+const link = split(
+  ({ query }) => {
+    const { kind, operation } = getMainDefinition(query);
+    return kind === "OperationDefinition" && operation === "subscription";
+  },
+  wsLink,
+  authLink.concat(httpLink)
+);
 // Instantiate apollo client, pass the http link, and a new instance of inmemorycache
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link,
   cache: new InMemoryCache()
 });
 

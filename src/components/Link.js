@@ -45,11 +45,11 @@ class Link extends Component {
             </Mutation>
           )}
         </div>
-        <div className="ml1">
+        <div className="linksToShow">
           <div>
             {this.props.link.description} ({this.props.link.url})
           </div>
-          <div className="f6 lh-copy gray">
+          <div className=" lh-copy gray">
             {this.props.link.votes.length} votes | posted by{" "}
             {this.props.link.postedBy
               ? this.props.link.postedBy.name

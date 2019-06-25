@@ -35,7 +35,8 @@ input {
 }
 
 .f11 {
-  font-size: 20px;
+  font-size: 15px;
+  padding: 5px;
 }
 
 .f11:hover {

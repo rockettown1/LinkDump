@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|News+Cycle|Pacifico&display=swap");
+
 .App {
   text-align: center;
 }
@@ -21,6 +23,76 @@
 
 .App-link {
   color: #61dafb;
+}
+h1 {
+  padding-top: 20px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "News Cycle";
+  color: white;
+}
+
+p:hover {
+  color: rgb(38, 133, 125);
+}
+
+h4 {
+  color: white;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  margin: 0;
+  font-family: "News Cycle";
+}
+.main {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header {
+  width: 100vw;
+  background-color: rgb(46, 29, 53);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  padding-left: 20px;
+  color: white;
+  font-family: "News Cycle";
+  font-size: 200%;
+}
+
+.log {
+  margin-right: 20px;
+}
+
+.linkOptions {
+  display: flex;
+}
+
+.submitLink {
+  display: flex;
+}
+
+.allOptions {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.linksToShow {
+  font-family: "News Cycle";
+  width: 300px;
 }
 
 @keyframes App-logo-spin {

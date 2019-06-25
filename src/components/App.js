@@ -4,11 +4,12 @@ import { Switch, Route } from "react-router-dom";
 import LinkList from "./LinkList";
 import CreateLink from "./CreateLink";
 import Login from "./Login";
+import "../styles/App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="center w85">
+      <div className="main">
         <Header />
         <div className="ph3 pv1 background-gray">
           <Switch>
