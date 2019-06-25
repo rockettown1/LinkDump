@@ -52,6 +52,7 @@ h4 {
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .header {
@@ -89,10 +90,19 @@ h4 {
 
   justify-content: space-between;
 }
-
+.linkItems {
+  width: 100vw;
+  padding: 10px;
+}
 .linksToShow {
   font-family: "News Cycle";
-  width: 300px;
+}
+.displayThese {
+  display: flex;
+}
+
+a:hover {
+  color: rgb(38, 133, 125);
 }
 
 @keyframes App-logo-spin {

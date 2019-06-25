@@ -46,8 +46,13 @@ class Link extends Component {
           )}
         </div>
         <div className="linksToShow">
-          <div>
-            {this.props.link.description} ({this.props.link.url})
+          <div className="displayThese">
+            <div>{this.props.link.description}</div>
+            <p>---</p>
+            <div className="theURL">
+              {" "}
+              <a href={this.props.link.url}>({this.props.link.url})</a>
+            </div>
           </div>
           <div className=" lh-copy gray">
             {this.props.link.votes.length} votes | posted by{" "}

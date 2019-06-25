@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="main">
         <Header />
-        <div className="ph3 pv1 background-gray">
+        <div className="linkItems background-gray">
           <Switch>
             <Route exact path="/" component={LinkList} />
             <Route exact path="/create" component={CreateLink} />
