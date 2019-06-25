@@ -42,8 +42,9 @@ p:hover {
 
 h4 {
   color: white;
-  padding-left: 25px;
   padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin: 0;
   font-family: "News Cycle";
 }
@@ -64,7 +65,6 @@ h4 {
 }
 
 .title {
-  padding-left: 20px;
   color: white;
   font-family: "News Cycle";
   font-size: 200%;
@@ -111,5 +111,11 @@ a:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 130%;
   }
 }
