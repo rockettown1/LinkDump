@@ -32,7 +32,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws://sleepy-lake-68690.herokuapp.com/`,
+  uri: `wss://sleepy-lake-68690.herokuapp.com/`,
   options: {
     reconnect: true,
     connectionParams: {
