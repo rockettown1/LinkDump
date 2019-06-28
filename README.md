@@ -8,7 +8,7 @@ Log in, and post links. Ability to view all links, and submit a new link (if you
 
 Technical:
 
-Front end is Reactjs, with a graphQL API using the react-Apollo client. Queries from the front end are sent to Prisma (a graphQL interface for databases) Back end is made in Nodejs. This app uses a MySQL database, but thanks to the Prisma generated interface you don't actually need to write SQL queries
+Front end is Reactjs, with a graphQL API using the react-Apollo client. Queries from the front end are sent to Prisma API (a graphQL interface for databases) The backend is made in Nodejs. This app uses a MySQL database, but thanks to the Prisma generated interface you don't actually need to write SQL queries.
 
 The Prisma client instance takes your graphQL resolvers and schema, and generates an API that can interact with a database type of your choice. Pretty handy.
 
