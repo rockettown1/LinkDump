@@ -105,13 +105,9 @@ a:hover {
   color: rgb(38, 133, 125);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subBut,
+.inputs {
+  font-family: "News Cycle";
 }
 
 @media only screen and (max-width: 600px) {

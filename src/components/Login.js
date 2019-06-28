@@ -30,7 +30,7 @@ class Login extends Component {
   render() {
     const { login, email, password, name } = this.state;
     return (
-      <div>
+      <div className="inputs">
         <h4 className="mv3">{login ? "Login" : "Sign Up"}</h4>
         <div className="flex flex-column">
           {!login && (
@@ -61,13 +61,13 @@ class Login extends Component {
             onCompleted={data => this._confirm(data)}
           >
             {mutation => (
-              <div className="pointer mr2 button" onClick={mutation}>
+              <div className="pointer mr2 button subBut" onClick={mutation}>
                 {login ? "login" : "create account"}
               </div>
             )}
           </Mutation>
           <div
-            className="pointer button"
+            className="pointer button subBut"
             onClick={() => this.setState({ login: !login })}
           >
             {login ? "need to create an account?" : "already have an account?"}

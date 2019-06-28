@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import { FEED_QUERY } from "./LinkList";
+import "../styles/App.css";
 
 const POST_MUTATION = gql`
   mutation PostMutation($description: String!, $url: String!) {
@@ -22,7 +23,7 @@ class CreateLink extends Component {
     const { description, url } = this.state;
     return (
       <div>
-        <div className="flex flex-column mt3">
+        <div className="flex flex-column mt3 inputs">
           <input
             className="mb2"
             value={description}
@@ -56,7 +57,11 @@ class CreateLink extends Component {
             if (loading) {
               return <p>Saving...</p>;
             }
-            return <button onClick={postMutation}>Submit</button>;
+            return (
+              <button className="subBut" onClick={postMutation}>
+                Submit
+              </button>
+            );
           }}
         </Mutation>
       </div>
