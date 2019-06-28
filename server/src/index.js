@@ -16,7 +16,7 @@ const resolvers = {
   Vote
 };
 
-// 3
+// hello
 const server = new GraphQLServer({
   typeDefs: "./src/schema.graphql",
   resolvers,
