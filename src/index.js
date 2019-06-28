@@ -18,7 +18,7 @@ import { getMainDefinition } from "apollo-utilities";
 
 // create http-link which will connect your Apollo Client instance to your GraphQL API (server)
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000"
+  uri: "https://sleepy-lake-68690.herokuapp.com/"
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -32,7 +32,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws://localhost:4000`,
+  uri: `https://sleepy-lake-68690.herokuapp.com/`,
   options: {
     reconnect: true,
     connectionParams: {
